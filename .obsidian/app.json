@@ -1,0 +1,11 @@
+{
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "foldHeading": false,
+  "foldIndent": false,
+  "livePreview": false,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "newFileLocation": "root",
+  "attachmentFolderPath": "attachés"
+}

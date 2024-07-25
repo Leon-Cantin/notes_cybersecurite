@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "ff88758ec21a622b",
+    "type": "split",
+    "children": [
+      {
+        "id": "5593f468d5cf431c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8f1a81699d2c177",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Active Directory/Énumération/Requêtes LDAP.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c09431408900f088",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fd3cb69a71e86b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7a8167cecee8c179",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1d1d831f0d316b97",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "smtp",
+                "matchingCase": false,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4f96fef96489ee97",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 242.5
+  },
+  "right": {
+    "id": "b2627e3926a1862c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b342e6ba6e4bbcfe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da9fd4860ee49bb7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Active Directory/Énumération/Requêtes LDAP.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e0be9fb27a38a4d4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Active Directory/Énumération/Requêtes LDAP.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0ef18cd7ae450d68",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "abf19777cd1fafce",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Active Directory/Énumération/Requêtes LDAP.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c8f1a81699d2c177",
+  "lastOpenFiles": [
+    "Active Directory/Énumération/Énumération.md",
+    "Active Directory/Énumération/Requêtes LDAP.md",
+    "Énumération/Active/Protocoles/SMTP.md",
+    "Attaques/Web/XSS/XSS.md",
+    "Attaques/Web/HTTP Request smuggling.md",
+    "Attaques/Web/XSS/Exploits.md",
+    "Attaques/Web/XSS/Mitigation.md",
+    "Attaques/Web/HTTP Response Splitting (CRLF).md",
+    "Attaques/Injection SQL/MySQL - MariaDB.md",
+    "Compilation de code.md",
+    "Escalade de privilèges/Linux/Linux.md",
+    "Redirection Port et Tunneling/Ligolo-NG.md",
+    "Redirection Port et Tunneling/Linux.md",
+    "Escalade de privilèges/Windows/Windows.md",
+    "Terminal Intéractif/Terminal Intéractif.md",
+    "Attaques/Attaques côté client/Attaques côté client.md",
+    "Énumération/Énumération.md",
+    "Envoi de fichiers/Envoi de fichiers.md",
+    "Escalade de privilèges/Escalade de privilèges.md",
+    "Escalade de privilèges/Windows/Movement Latéral.md",
+    "Escalade de privilèges/Windows/Exploits.md",
+    "Escalade de privilèges/Windows/Services/Services.md",
+    "Escalade de privilèges/Windows/Services/Binaire.md",
+    "Énumération/Passive.md",
+    "Énumération/Active/Protocoles/IMAP - POP3.md",
+    "Active Directory/Élévation/Attaques d'authentification.md",
+    "Active Directory/Élévation",
+    "zattachés/ACL_attacks_graphic.webp",
+    "zattachés/trusts-diagram.png",
+    "zattachés/gpo_levels.png",
+    "zattachés/ntlm_auth.png",
+    "htb_ad",
+    "zattachés/taskmanagerdump.png",
+    "Attaque de mot de passe/Windows",
+    "zattachés/Auth_process1.png",
+    "zattachés/Pasted image 20240118093800.png",
+    "zattachés/Pasted image 20240118092933.png",
+    "zattachés",
+    "Terminal Intéractif",
+    "Active Directory/Attaques authentification",
+    "zattachés/Pasted image 20240118105057.png",
+    "zattachés/Pasted image 20240118104959.png",
+    "Active Directory/Authentication",
+    "Active Directory/Énumération",
+    "Active Directory",
+    "Metasploit",
+    "Untitled.canvas"
+  ]
+}
