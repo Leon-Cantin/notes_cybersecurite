@@ -73,6 +73,10 @@ qwinsta
 |`wmic group list /format:list`|Information about all local groups|
 |`wmic sysaccount list /format:list`|Dumps information about any system accounts that are being used as service accounts.|
 
+```powershell
+Get-WmiObject -Class win32_group -Filter "Domain='INLANEFREIGHT'" | Select Caption,Name
+```
+
 ## Net.exe
 Très surveillé. utiliser `net1` au lieu de `net` peut potentiellement éviter détection.
 #### Table of Useful Net Commands
@@ -142,4 +146,24 @@ Get-ADTrust -Filter *
 Get-ADGroup -Filter * | select name
 Get-ADGroup -Identity "Backup Operators"
 Get-ADGroupMember -Identity "Backup Operators"
+```
+
+## Microsoft RSAT
+Remote Server Administration Tools. Contient divers outils de gestion. Disponible sur Professional et Enterprise.
+Peut être utilisé à distance si nous avons des creds et un hôte non lié au domaine mais qui peut contacter le DC.
+```powershell-session
+Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property Name, State
+```
+```powershell-session
+Add-WindowsCapability -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0  –Online
+```
+
+## AD Service Interfaces (ADSI)
+```powershell
+([adsisearcher]"(&(objectClass=Computer))").FindAll()
+```
+
+## MMC
+```cmd-session
+runas /netonly /user:Domain_Name\Domain_USER mmc
 ```

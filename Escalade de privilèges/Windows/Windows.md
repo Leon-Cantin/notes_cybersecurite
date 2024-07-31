@@ -1,25 +1,25 @@
-# Security identifier (SID)
+## Security identifier (SID)
 Valeur unique assigné à divers entités comme les usagers ou les groupes. Localement généré par Local Security Authority(LSA). Sur les usagers et groupes de domaines par Domain Controller (DC).
 
-# Niveau d'intégrité
+## Niveau d'intégrité
 * System: SYSTEM (kernel, ...)
 * High: Elevated users
 - Medium: Standard users
 - Low: very restricted rights often used in sandboxed[^privesc_win_sandbox] processes or for directories storing temporary data
 
-# Users Access Control (UAC)
+## Users Access Control (UAC)
 Protège contre l'exécution d'applications. Quand un utilisateur s'authentifi, il reçoi 2 jetons. Un utilisateur standard et un admin régulier pour exécuter opérations privilégiés. 
 
-# Comptes pré-existant
-## Utilisateur:
+## Comptes par défaut
+### Utilisateur:
 - Administrator
-## Groupes:
+### Groupes:
 - Administrators			
 - Backup Operators: Accès aux fichiers pour sauvegardes
 - Remote Desktop Users: RDP
 - Remote Management Users: WinRM
 
-# Information à obtenir
+## Information à obtenir
 * Nom d'utilisateur et d'hôte
 	* whoami
 * groupes de l'utilisateur courant et privilèges
@@ -43,7 +43,7 @@ Protège contre l'exécution d'applications. Quand un utilisateur s'authentifi, 
 * processus actifs
 	* Get-Process
 
-# Recherche de fichiers
+## Recherche de fichiers
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shell
 gci -Path C:\Users -Include *.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx -File -Recurse -ErrorAction SilentlyContinue
@@ -67,25 +67,25 @@ findstr /SIM /C:"password" *.txt *.ini *.cfg *.config *.xml *.git *.ps1 *.yml
 * Outils automatisés
 	* [Lazagne](https://github.com/AlessandroZ/LaZagne) `start lazagne.exe all`
 
-# Powershell
+## Powershell
 Historique sauvegardé auto. **Get-History** pour l'accéder. **Clear-History** pour le nettoyer
 Module PSReadLine journalise aussi **(Get-PSReadlineOption).HistorySavePath** pour trouver le chemin d'accès.
 **Event Viewer** peut logger des commandes powershell
 
-# Automatiser
+## Automatiser
 Faire attention, ne trouve pas tout.
 	winpeas: **/usr/share/peass/winpeas/winPEASx64.exe**
 	seatbelt: https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
 	JAWS
 
-# runas
+## runas
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 runas /user:backupadmin cmd
 runas /netonly /user:domain\user command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Activer RDP
+## Activer RDP
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shell
 #désactiver restriction admin
@@ -94,7 +94,7 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# IIS
+## IIS
 Si admin on peut récupérer les mots de passe du service web
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

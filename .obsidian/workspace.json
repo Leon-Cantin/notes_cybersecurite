@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Énumération/Requêtes LDAP.md",
+                "file": "Escalade de privilèges/Windows/Windows.md",
                 "mode": "preview",
                 "source": true
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "smtp",
+                "query": "SID",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory/Énumération/Requêtes LDAP.md",
+                "file": "Escalade de privilèges/Windows/Windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Active Directory/Énumération/Requêtes LDAP.md",
+                "file": "Escalade de privilèges/Windows/Windows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Active Directory/Énumération/Requêtes LDAP.md"
+                "file": "Escalade de privilèges/Windows/Windows.md"
               }
             }
           }
@@ -148,32 +148,34 @@
   },
   "active": "c8f1a81699d2c177",
   "lastOpenFiles": [
+    "Escalade de privilèges/Windows/outils.md",
+    "Escalade de privilèges/Windows/Windows.md",
+    "Escalade de privilèges/Windows/Services/Services.md",
+    "Escalade de privilèges/Windows/Exploits.md",
+    "Escalade de privilèges/Windows/Tâches.md",
+    "Active Directory/Énumération/Natif/LDAP/Attributs.md",
+    "Active Directory/Énumération/Natif/LDAP/Convertir UAC script.md",
+    "Active Directory/Énumération/Natif/LDAP/LDAP.md",
+    "Active Directory/Énumération/Natif/LDAP/Scripts.md",
+    "Active Directory/Énumération/Natif/Filtres Powershell.md",
     "Active Directory/Énumération/Énumération.md",
-    "Active Directory/Énumération/Requêtes LDAP.md",
+    "Active Directory/Active Directory.md",
+    "Active Directory/Authentication/Authentication.md",
+    "Active Directory/Élévation/ACL Abuse.md",
+    "Active Directory/Élévation/Attaques d'authentification.md",
+    "Active Directory/Élévation/Attaques de trusts.md",
+    "Active Directory/Énumération/Natif/Natif.md",
+    "Active Directory/Énumération/Bloodhound.md",
+    "Active Directory/Énumération/Natif/LDAP",
+    "Active Directory/Énumération/LDAP.md",
+    "Active Directory/Énumération/Natif",
+    "Active Directory/Énumération/Réseau.md",
+    "Active Directory/Movement Latéral.md",
     "Énumération/Active/Protocoles/SMTP.md",
     "Attaques/Web/XSS/XSS.md",
     "Attaques/Web/HTTP Request smuggling.md",
     "Attaques/Web/XSS/Exploits.md",
     "Attaques/Web/XSS/Mitigation.md",
-    "Attaques/Web/HTTP Response Splitting (CRLF).md",
-    "Attaques/Injection SQL/MySQL - MariaDB.md",
-    "Compilation de code.md",
-    "Escalade de privilèges/Linux/Linux.md",
-    "Redirection Port et Tunneling/Ligolo-NG.md",
-    "Redirection Port et Tunneling/Linux.md",
-    "Escalade de privilèges/Windows/Windows.md",
-    "Terminal Intéractif/Terminal Intéractif.md",
-    "Attaques/Attaques côté client/Attaques côté client.md",
-    "Énumération/Énumération.md",
-    "Envoi de fichiers/Envoi de fichiers.md",
-    "Escalade de privilèges/Escalade de privilèges.md",
-    "Escalade de privilèges/Windows/Movement Latéral.md",
-    "Escalade de privilèges/Windows/Exploits.md",
-    "Escalade de privilèges/Windows/Services/Services.md",
-    "Escalade de privilèges/Windows/Services/Binaire.md",
-    "Énumération/Passive.md",
-    "Énumération/Active/Protocoles/IMAP - POP3.md",
-    "Active Directory/Élévation/Attaques d'authentification.md",
     "Active Directory/Élévation",
     "zattachés/ACL_attacks_graphic.webp",
     "zattachés/trusts-diagram.png",
@@ -192,8 +194,6 @@
     "zattachés/Pasted image 20240118104959.png",
     "Active Directory/Authentication",
     "Active Directory/Énumération",
-    "Active Directory",
-    "Metasploit",
     "Untitled.canvas"
   ]
 }

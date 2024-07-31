@@ -24,7 +24,14 @@ ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclas
 ```shell
 ./windapsearch.py --dc-ip 172.16.5.5 -u "" -U
 ```
-
+Avec python
+```python
+from ldap3 import *
+s = Server('10.129.1.207',get_info = ALL)
+c =  Connection(s, '', '')
+c.bind()
+s.info
+```
 ## Politique de mot de passe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~powershell
 net accounts
