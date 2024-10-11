@@ -18,6 +18,7 @@ Si on trouve rien, essayer UDP 161 et 162 (SNMP)
 Garder en tête la vue d'ensemble
 
 # WEB
+fuzz sous domaines
 nikto
 essayer divers listes de divers fournisseurs (seclist, dirb, dirbuster...)
 
@@ -41,6 +42,7 @@ Pour aller vite, utiliser winPeas ou linPeas
 * Services/tâches
 * Fichiers qui traînent
 * /etc/shadow 		pour les mots de passes
+* Tester réutilisation de mots de passes
 	
 # Partages
 ```

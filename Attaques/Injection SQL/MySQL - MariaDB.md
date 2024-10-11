@@ -1,7 +1,7 @@
 | | |
 | --- | --- |
 |# |	commentaire |
-| -- | 	commentaire (suivi d'un espace en MySQL)|
+| `-- ` | 	commentaire (suivi d'un espace en MySQL)|
 |‘abc’|	guillemets simples pour délimiter chaîne de charactères|
 |'-- 	|		Fermer la chaîne et commenter la suite|
 |' OR 1=1-- |	Retourne tout, 1=1 toujours vrai|

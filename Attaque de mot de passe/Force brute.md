@@ -1,5 +1,7 @@
 ## Hydra
 Permet d'utiliser un mot ou une liste de mot pour trouver nom d'utilisateur et/ou le mot de passe pour différent services.
+* Utiliser `^USER^` `^PASS^` pour démarquer les creds.
+* `-u` alterner les mots de passes et usagers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shell
 #ssh
 hydra -l george -P /usr/share/wordlists/rockyou.txt -s 2222 ssh://192.168.50.201

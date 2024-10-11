@@ -10,13 +10,27 @@
 | **TXT** | Données arbitraire |
 | **SOA** | Info sur la zone et le courriel de l'administrateur |
 
+# Tactiques
+## Zone transfers
+```bash
+#identifier les serveurs de noms
+nslookup -type=NS zonetransfer.me
+#Faire le transfert de zones
+nslookup -type=any -query=AXFR zonetransfer.me nsztm1.digi.ninja
+```
+```shell
+dig axfr inlanefreight.htb @10.129.14.128
+```
+## Brute force
+Énumérations à l'aveugle, envoyer des sous-domaines (ftp., www., mail., ...)
+
 # Outils
 ## host
 ``` bash
 host [-t mx,a,aaaa, ...] nom
 ```
 ## dnsenum
-automatise la reconnaissance DNS
+Enum, Zone transfer, subdomain brute-forcing, google scraping, reverse lookup, whois.
 ## dnsrecon
 automatise la reconnaissance DNS
 -d domaine
@@ -45,16 +59,3 @@ atlas-pp-shv-{GOBUSTER}-sin6
 ```bash
 gobuster dns -q -r "d.ns.facebook.com" -d "facebook.com" -w "numbers.txt" -p ./patterns.txt -o "gobuster_${TARGET}.txt"
 ```
-# Tactiques
-## Zone transfers
-```bash
-#identifier les serveurs de noms
-nslookup -type=NS zonetransfer.me
-#Faire le transfert de zones
-nslookup -type=any -query=AXFR zonetransfer.me nsztm1.digi.ninja
-```
-```shell
-dig axfr inlanefreight.htb @10.129.14.128
-```
-## Brute force
-Énumérations à l'aveugle, envoyer des sous-domaines (ftp., www., mail., ...)

@@ -1,4 +1,7 @@
 Code exécuté sur une page chargé par un autre utilisateur. Causé par une mauvaise gestion des charactères spéciaux
+# Chemin d'une requête
+Plusieurs intervenant peuvent encoder/bloquer des requêtes causants plusieurs cas étranges à divers niveaux.
+Navigateur(encode)/Outils(encode pas) -> WAF(pourrait filtrer) -> serveur(décode,décode pas,encode, encode pas) -> réponse (en-tête de protection, pas d'en-tête)
 
 # Stored (Persistent)
 Le contenu malicieu est placé sur le serveur pour être retourné plus tard à un utilisateur. Ex: post ou commentaire.
@@ -31,6 +34,8 @@ Vérifier que les charactères spéciaux sont supportés:
 <plaintext>
 <script>alert(document.cookie)</script>
 <img src="" onerror=alert(window.origin)>
+<iframe src=”javascript:alert(1)”></iframe>
+<svg xmlns="http://www.w3.org/2000/svg" onload="alert(document.domain)"/>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/README.md

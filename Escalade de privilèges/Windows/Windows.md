@@ -9,6 +9,11 @@ Valeur unique assigné à divers entités comme les usagers ou les groupes. Loca
 
 ## Users Access Control (UAC)
 Protège contre l'exécution d'applications. Quand un utilisateur s'authentifi, il reçoi 2 jetons. Un utilisateur standard et un admin régulier pour exécuter opérations privilégiés. 
+![[auth_process.png]]
+
+[User Rights Assignment](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+Priv `Disabled` dans whoami /priv veut dire que le compte a le privilège mais ne peux s'en servir. Besoin de programmation pour l'activer. [script](https://www.powershellgallery.com/packages/PoshPrivilege/0.3.0.0/Content/Scripts%5CEnable-Privilege.ps1) ou ce [script](https://www.leeholmes.com/adjusting-token-privileges-in-powershell/) pour activer sur le jeton
 
 ## Comptes par défaut
 ### Utilisateur:
@@ -20,28 +25,53 @@ Protège contre l'exécution d'applications. Quand un utilisateur s'authentifi, 
 - Remote Management Users: WinRM
 
 ## Information à obtenir
+[Windows commands reference](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
 * Nom d'utilisateur et d'hôte
-	* whoami
+	* `whoami`
+	* `echo %USERNAME%`
 * groupes de l'utilisateur courant et privilèges
-	* whoami /all
+	* `whoami /all`
+	* `wmic qfe` Quick Fix Engineering pour les patches
+	* `Get-Hostfix`
 * utilisateurs et groupes existant
-	* Get-LocalUser
-	* Get-LocalGroup
-	* Get-LocalGroupMember \<group>
-	* net user \<utilisateur>
-	* net localgroup
+	* `Get-LocalUser`
+	* `Get-LocalGroup`
+	* `Get-LocalGroupMember \<group>`
+	* `net user \<utilisateur>`
+	* `net localgroup <nom_groupe>`
+	* `query user` usagers connectés
 * système d'exploitation, version et architecture
-	* systeminfo
+	* `systeminfo`
 * Information réseau
-	* ipconfig /all  - Interfaces réseau
-	* route print
-	* netstat -ano   -  Connections ouvertes
+	* `ipconfig /all`  - Interfaces réseau
+	* `route print`
+	* `netstat -ano`  -  Connections ouvertes
+	* `arp -a`
 * applications installées
-	* Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
-	* Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
+	* `Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname`
+	* `Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname`
+	* `wmic product get name`
 	* Vérifier les dossiers d'installations (Program Files, download) pour non-installations
 * processus actifs
-	* Get-Process
+	* `Get-Process`
+	* `netstat -ano`
+	* `tasklist /svc`
+* variables d'environement `set`
+* politiques de compte `net accounts`
+
+## Protections
+### Status windows defender 
+```powershell
+Get-MpComputerStatus
+```
+
+### AppLocker
+Peut tester `Local`, `Effective` (Enforced) et `Domain`
+```powershell
+Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
+#tester
+Get-AppLockerPolicy -Local | Test-AppLockerPolicy -path C:\Windows\System32\cmd.exe
+```
 
 ## Recherche de fichiers
 

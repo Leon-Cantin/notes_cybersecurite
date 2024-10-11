@@ -40,7 +40,12 @@ curl http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=key' -H 'Conte
 #Pour fuzzer répertoire, fichier et extention
 ffuf -w ./folders.txt:FOLDERS,./wordlist.txt:WORDLIST,./extensions.txt:EXTENSIONS -u http://192.168.10.10/FOLDERS/WORDLISTEXTENSIONS
 ```
-* -w /usr/share/wordlist/truc:FUZZ	assigner un mot (FUZZ) à une liste
+
+| *Paramètre* | *Description* |
+| --- | --- |
+| -w \[liste de mots]:\[variable] | Assigner une variable à une liste. FUZZ par défaut |
+| -recursion -recursion-depth 1 | Récursion de pages et répertoires |
+
 ## curl
 ```shell
 #Tester Vhost

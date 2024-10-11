@@ -1,19 +1,11 @@
 # whois
 whois \[domain name] -h \[IP?]
 
-# Google
-Quelques opérateurs peuvent être utiles:
 
-| Opérateur | Description |
-| --- | --- |
-| **site** | Limiter la recherche à un site |
-| **filetype/ext** | [txt, py, php, xml, ...] chercher type de fichier |
-| **-** | ajouter devant opérateur pour exclure. ex: -filetype:html pour exclure html |
-
-* ***robots.txt** : instructions pour crawlers
-* ***sitemap.xml**
-
-(Johnny Long, Bill Gardner, Justin Brown, 2015), https://www.amazon.com/Google-Hacking-Penetration-Testers-Johnny/dp/0128029641/ref=dp_ob_image_bk
+# standards
+* **robots.txt** : instructions pour crawlers
+* **sitemap.xml**
+* **.well-known** https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 
 # Netcraft
 https://searchdns.netcraft.com
@@ -34,3 +26,6 @@ https://securityheaders.com/
 # SSL/TLS
 Test le SSL/TLS d'une site
 https://www.ssllabs.com/ssltest/
+
+# OSINT Framework
+https://osintframework.com/

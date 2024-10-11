@@ -7,7 +7,7 @@
 |`hklm\security`|Contains cached credentials for domain accounts. We may benefit from having this on a domain-joined Windows target.|
 
 ## Extraction des ruches
-Doit être **admin**
+Doit être **admin** ou avoir **SeBackupPrivilege**
 ### reg.exe
 ```cmd-session
 reg.exe save hklm\sam C:\sam.save

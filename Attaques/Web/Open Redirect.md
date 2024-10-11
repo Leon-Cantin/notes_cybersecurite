@@ -1,0 +1,19 @@
+Essayer les paramètres suivant sur page d'authentification.
+- ?url=
+- ?link=
+- ?redirect=
+- ?redirecturl=
+- ?redirect_uri=
+- ?return=
+- ?return_to=
+- ?returnurl=
+- ?go=
+- ?goto=
+- ?exit=
+- ?exitpage=
+- ?fromurl=
+- ?fromuri=
+- ?redirect_to=
+- ?next=
+- ?newurl=
+- ?redir=

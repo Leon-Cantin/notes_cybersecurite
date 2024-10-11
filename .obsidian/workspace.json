@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5593f468d5cf431c",
+        "id": "64b502e4737805c3",
         "type": "tabs",
         "children": [
           {
-            "id": "c8f1a81699d2c177",
+            "id": "36be6164f3fe5e5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Escalade de privilèges/Windows/Windows.md",
-                "mode": "preview",
+                "file": "Terminal Intéractif/Terminal Intéractif.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SID",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.5
+    "width": 263.5
   },
   "right": {
     "id": "b2627e3926a1862c",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Escalade de privilèges/Windows/Windows.md",
+                "file": "Terminal Intéractif/Terminal Intéractif.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Escalade de privilèges/Windows/Windows.md",
+                "file": "Terminal Intéractif/Terminal Intéractif.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Escalade de privilèges/Windows/Windows.md"
+                "file": "Terminal Intéractif/Terminal Intéractif.md"
               }
             }
           }
@@ -146,36 +146,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8f1a81699d2c177",
+  "active": "36be6164f3fe5e5c",
   "lastOpenFiles": [
-    "Escalade de privilèges/Windows/outils.md",
+    "Notes - Trickster.md",
+    "Escalade de privilèges/Linux/Linux.md",
+    "Terminal Intéractif/Terminal Intéractif.md",
     "Escalade de privilèges/Windows/Windows.md",
-    "Escalade de privilèges/Windows/Services/Services.md",
-    "Escalade de privilèges/Windows/Exploits.md",
-    "Escalade de privilèges/Windows/Tâches.md",
-    "Active Directory/Énumération/Natif/LDAP/Attributs.md",
-    "Active Directory/Énumération/Natif/LDAP/Convertir UAC script.md",
-    "Active Directory/Énumération/Natif/LDAP/LDAP.md",
-    "Active Directory/Énumération/Natif/LDAP/Scripts.md",
-    "Active Directory/Énumération/Natif/Filtres Powershell.md",
-    "Active Directory/Énumération/Énumération.md",
-    "Active Directory/Active Directory.md",
-    "Active Directory/Authentication/Authentication.md",
-    "Active Directory/Élévation/ACL Abuse.md",
-    "Active Directory/Élévation/Attaques d'authentification.md",
-    "Active Directory/Élévation/Attaques de trusts.md",
-    "Active Directory/Énumération/Natif/Natif.md",
-    "Active Directory/Énumération/Bloodhound.md",
-    "Active Directory/Énumération/Natif/LDAP",
-    "Active Directory/Énumération/LDAP.md",
-    "Active Directory/Énumération/Natif",
-    "Active Directory/Énumération/Réseau.md",
-    "Active Directory/Movement Latéral.md",
-    "Énumération/Active/Protocoles/SMTP.md",
+    "Untitled.canvas",
+    "Évitement d'anti-virus/Évitement d'anti-virus.md",
+    "Attaque de mot de passe/Attaque de mot de passe.md",
+    "Énumération/Active/Protocoles/FTP.md",
+    "Attaques/Injection SQL/SQLMap.md",
     "Attaques/Web/XSS/XSS.md",
-    "Attaques/Web/HTTP Request smuggling.md",
-    "Attaques/Web/XSS/Exploits.md",
-    "Attaques/Web/XSS/Mitigation.md",
+    "Attaques/Web/Téléversement.md",
+    "Attaques/Web/Inclusion de fichiers/Inclusion de fichiers.md",
+    "Attaque de mot de passe/Force brute.md",
+    "Attaque de mot de passe/Gestionnaire de mot de passe.md",
+    "Énumération/Active/Protocoles/Protocoles.md",
+    "Énumération/Active/Web/Web.md",
+    "Attaque de mot de passe/Linux.md",
+    "Énumération/Active/Web/Javascript obfuscation.md",
+    "Untitled 1.md",
+    "Envoi de fichiers/Linux.md",
+    "Redirection Port et Tunneling/HTTP.md",
+    "Untitled.md",
+    "Attaques/Injection SQL/Injection SQL.md",
+    "Énumération/Énumération.md",
+    "Énumération/Active/NMap.md",
+    "Redirection Port et Tunneling/Linux.md",
+    "Redirection Port et Tunneling/SSH.md",
+    "zattachés/diagram.webp",
+    "Énumération/Active/Web",
+    "Énumération/Passive",
+    "zattachés/auth_process.png",
+    "Active Directory/Énumération/Natif/LDAP",
+    "Active Directory/Énumération/Natif",
     "Active Directory/Élévation",
     "zattachés/ACL_attacks_graphic.webp",
     "zattachés/trusts-diagram.png",
@@ -189,11 +194,6 @@
     "zattachés/Pasted image 20240118092933.png",
     "zattachés",
     "Terminal Intéractif",
-    "Active Directory/Attaques authentification",
-    "zattachés/Pasted image 20240118105057.png",
-    "zattachés/Pasted image 20240118104959.png",
-    "Active Directory/Authentication",
-    "Active Directory/Énumération",
-    "Untitled.canvas"
+    "Active Directory/Attaques authentification"
   ]
 }

