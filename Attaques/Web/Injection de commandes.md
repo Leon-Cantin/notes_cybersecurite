@@ -43,10 +43,12 @@ lister variables:	Get-ChildItem Env:
 ##### Linux et Windows:
 Utiliser ‘ ‘ ou “ ” pour briser la commande, mais ne pas mélanger. ’w'hoami
 ##### Linux:
-```
+```shell
 \ et $@	w\ho\am\i 	who$@ami
-$(tr "[A-Z]" "[a-z]"<<<"WhOaMi") 	Utiliser des maj et min puis reconvertir en min
-$(rev<<<'imaohw')	inverser une commande
+# Utiliser des maj et min puis reconvertir en min
+$(tr "[A-Z]" "[a-z]"<<<"WhOaMi")
+#Inverser une commande
+$(rev<<<'imaohw')
 ```
 ##### Windows:
 ```

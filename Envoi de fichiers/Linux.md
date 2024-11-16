@@ -7,7 +7,7 @@ tar -xf firefox.tar.gz
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# SBM
+# SMB
 Créer un serveur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shell
 impacket-smbserver -smb2support -username abc -password 123 TMP /home/corsaire/offsec/pen200/

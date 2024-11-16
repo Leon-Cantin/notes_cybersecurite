@@ -1,0 +1,1 @@
+Référence à un objet auquel on ne devrait pas avoir accès.

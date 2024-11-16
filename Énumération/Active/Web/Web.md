@@ -29,6 +29,8 @@ Quelques techniques
 ffuf -recursion -recursion-depth 1 -u http://192.168.10.10/FUZZ -w /usr/share/wordlists/dirb/common.txt
 #noms de domaines
 ffuf -w ./SecLists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://FUZZ.academy.htb/
+#sous-domaines avec vhost
+ffuf -u http://10.129.227.182 -w /usr/share/wordlists/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -H "Host: FUZZ.runner.htb"
 #les VHost
 ffuf -w ./vhosts -u http://192.168.10.10 -H "HOST: FUZZ.randomtarget.com" -fs 612
 #Params GET

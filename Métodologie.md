@@ -1,9 +1,4 @@
-Prendre des notes. 
-* un dossier par machine
-* un fichier de creds
-* Tout ce qu'on fait
-Ne pas sauter trop vite d'une machine à l'autre
-Vérifier toutes nos options
+Prendre son temps et vérifier toutes nos options
 
 # Énumération
 Utiliser nmap
@@ -13,18 +8,21 @@ sudo nmap -sC -sV mailsrv1/nmap 192.168.50.242
 Rechercher les applications que l'on ne connait pas.
 Rechercher pour exploits. **Rechercher plus loins dans google**
 Ne pas arrêter si on trouve un accès, continuer d'énumérer
-Regarder les différents services disponibles
 Si on trouve rien, essayer UDP 161 et 162 (SNMP)
 Garder en tête la vue d'ensemble
 
 # WEB
-fuzz sous domaines
+## fuzz 
+* sous domaines
+* fichiers
 nikto
 essayer divers listes de divers fournisseurs (seclist, dirb, dirbuster...)
+* SSRF: balayer les ports internes ou machines internes.
 
 # Lecture de fichiers
 Lire les utilisateurs
 * /etc/passwd
+* Liste de fichiers commun lors d'un LFI
 * clef SSH /home/[user]/.ssh/id_rsa
 
 # Escalade de privilèges
@@ -39,9 +37,8 @@ Pour aller vite, utiliser winPeas ou linPeas
 * Processus
 	* pspy, ps -aux
 	* cron
-* Services/tâches
-* Fichiers qui traînent
-* /etc/shadow 		pour les mots de passes
+* Services/tâches/localhost
+* Fichiers de config
 * Tester réutilisation de mots de passes
 	
 # Partages

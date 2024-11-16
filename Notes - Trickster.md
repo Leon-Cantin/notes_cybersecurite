@@ -17,3 +17,4 @@ suid /opt/google/chrome/chrome-sandbox
 https://www.exploit-db.com/exploits/51983
 serveur HTTP sur 127.0.0.1:45279 Pas de page web
 avec pspy64 on voit des processus de google chrome s'exécuter. Le mot zygote revient que j'ai vu dans un exploit
+/usr/sbin/sendmail -FCronDaemon -i -B8BITMIME -oem root

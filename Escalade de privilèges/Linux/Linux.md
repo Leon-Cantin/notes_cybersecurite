@@ -24,13 +24,13 @@ Premier trait est le type. Suivis de 3 groupes de 3. Propriétaire, Groupe du Pr
 	arch
 	```
 * Processus:
-```shell
-ps aux
-#suivre en temps réel
-watch -n 1 "ps -aux | grep pass"
-#Très efficace si accessible
-./pspy
-```
+	```shell
+	ps aux
+	#suivre en temps réel
+	watch -n 1 "ps -aux | grep pass"
+	#Très efficace si accessible
+	./pspy
+	```
 ##  Tâches
  **cron** est l'ordonanceur de tâches sous Linux
 * ```ls -lah /etc/cron*```   cron.daily, cron.hourly, ...
@@ -42,8 +42,10 @@ watch -n 1 "ps -aux | grep pass"
 ```dpkg -l```	Debian
 
 ## Fichiers en écriture
-* dossiers ```find / -writable -type d 2>/dev/null```
-* fichiers ```find / -writable -type f 2>/dev/null```
+* dossiers ```find / -writable -type d 2>/dev/null | grep -v "/proc*"```
+* fichiers ```find / -writable -type f 2>/dev/null | grep -v "/proc*"```
+* fichiers de l'utilisateur: `-user [username]`
+* fichiers de groupes: `-group [group]`
 
 ## Disques
 ```mount```
@@ -76,9 +78,13 @@ Variables d'environment: ```env```
 **.bashrc** fichier de config bash
 **.bash_history** pour l'historique bash
 
+## Config de serveur web
+* Regarder les fichiers de config web
+* /etc/hosts
+
 ## Réseau
 Adapteurs réseau:
-* ```if config```
+* ```ifconfig```
 * ```ip a```
 routes: 
 * ```route```
@@ -127,6 +133,8 @@ find *cred*
 Cherche dans le contenu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shell
 grep -rn /mnt/Finance/ -ie cred
+#Limite le contenu
+grep -r -E -o ".{0,10}pass.{0,10}"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Combinaisons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~shell
