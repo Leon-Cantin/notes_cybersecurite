@@ -1,3 +1,5 @@
+Corrélation des services, droits et chemins est difficle nativement. Utiliser des outils.
+
 # Lister
 services.msn, Get-Service cmdlet ou Get-CimInstance cmdlet (Les 2 derniers ne fonctionnent pas en WinRM ou bind shell, utilisez RDP)
 Pour récupérer les services actifs

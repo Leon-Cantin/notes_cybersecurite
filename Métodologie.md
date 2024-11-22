@@ -18,6 +18,7 @@ Garder en tête la vue d'ensemble
 nikto
 essayer divers listes de divers fournisseurs (seclist, dirb, dirbuster...)
 * SSRF: balayer les ports internes ou machines internes.
+* listes de mots pour characteres spéciaux
 
 # Lecture de fichiers
 Lire les utilisateurs

