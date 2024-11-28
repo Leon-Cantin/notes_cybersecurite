@@ -25,7 +25,7 @@ Premier trait est le type. Suivis de 3 groupes de 3. Propriétaire, Groupe du Pr
 	```
 * Processus:
 	```shell
-	ps aux
+	ps auxww
 	#suivre en temps réel
 	watch -n 1 "ps -aux | grep pass"
 	#Très efficace si accessible

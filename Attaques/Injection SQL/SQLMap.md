@@ -34,7 +34,7 @@ Utiliser * dans l'entete pour la tester
 | --- | --- |
 | ```--prefix="%'))" --suffix="-- -"``` | |
 | ```--level [1-5]``` |	étend les vecteurs et frontières|
-| ```--rist [1-3]``` |étend les vecteurs. Peut avoir à augmenter le risk dans le cas de OR, page d'authentification. Requête vulnérable modifie peut-être la BD?|
+| ```--risk [1-3]``` |étend les vecteurs. Peut avoir à augmenter le risk dans le cas de OR, page d'authentification. Requête vulnérable modifie peut-être la BD?|
 | ```--code=200``` |	code pour détecter VRAI|
 | ```--title``` |			utilise la balise HTML \<title> pour différencier|
 | ```--string=success``` |	chaîne se retrouvant dans la réponse VRAI|
